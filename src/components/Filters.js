@@ -33,23 +33,20 @@ const Filters = (props) => {
         Clear all filters
         <button onClick={() => props.setList(data)}>Clear</button>
       </h3>
-
-      <div className="filters_gender">
-        <button onClick={() => onClickFilter("gender", "M")}>Gender Men</button>
-        <button onClick={() => onClickFilter("gender", "F")}>
-          Gender Women
-        </button>
-        <button onClick={() => onClickFilter("gender", "U")}>Unisex</button>
-      </div>
       <div className="filters_sort">
         <button onClick={() => onCLickSort("A")}>Lowest to highset</button>
         <button onClick={() => onCLickSort("D")}>Highset</button>
       </div>
 
-      <div className="filters_wear">
-        <button onClick={() => onClickFilter("wear", "Top")}>Top</button>
-        <button onClick={() => onClickFilter("wear", "Pant")}>Bottoms</button>
+      <div className="filters_gender">
+        <h4>Gender</h4>
+        <div className="filters_gender-main">
+          <button onClick={() => onClickFilter("gender", "M")}>Men</button>
+          <button onClick={() => onClickFilter("gender", "F")}>Women</button>
+          <button onClick={() => onClickFilter("gender", "U")}>Unisex</button>
+        </div>
       </div>
+
       <div className="filters_size">
         <select onChange={(e) => onChangeSize(e)}>
           <option value="All">Select</option>
@@ -58,6 +55,11 @@ const Filters = (props) => {
           <option value="L">Large</option>
           <option value="XL">Extra Large</option>
         </select>
+      </div>
+
+      <div className="filters_wear">
+        <button onClick={() => onClickFilter("wear", "Top")}>Top</button>
+        <button onClick={() => onClickFilter("wear", "Pant")}>Bottoms</button>
       </div>
 
       <div className="filters_brand">
