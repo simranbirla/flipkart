@@ -1,13 +1,15 @@
 import React, { useState } from "react";
+import data from "../data.json";
 import Products from "./Products";
 import Filters from "./Filters";
 
 const App = () => {
-  const [dis, setDis] = useState("Display");
+  const [list, setList] = useState(data);
+
   return (
     <div>
-      <Products dis={dis} />
-      <Filters setDis={setDis} />
+      <Products list={list} />
+      <Filters setList={setList} list={list} />
     </div>
   );
 };
