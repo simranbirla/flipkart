@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import Product from "./Product";
+import "../Style/Product.css";
 
 const Products = (props) => {
   return (
-    <div>
+    <div className="products">
       {props.list.map((item) => (
         <Product item={item} key={item.id} />
       ))}

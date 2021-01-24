@@ -7,9 +7,9 @@ const App = () => {
   const [list, setList] = useState(data);
 
   return (
-    <div>
-      <Products list={list} />
+    <div className="app">
       <Filters setList={setList} list={list} />
+      <Products list={list} />
     </div>
   );
 };
