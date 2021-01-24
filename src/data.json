@@ -5,7 +5,7 @@
         "gender":"M",
         "size":"S",
         "price":700,
-        "brand":"Holister",
+        "brand":"HRX",
         "wear":"Top"
     },
     {
@@ -32,7 +32,7 @@
         "gender":"F",
         "size":"L",
         "price":1200,
-        "brand":"Holister",
+        "brand":"HRX",
         "wear":"Top"
     },
     {
@@ -68,7 +68,7 @@
         "gender":"F",
         "size":"XL",
         "price":1300,
-        "brand":"Holister",
+        "brand":"HRX",
         "wear":"Pant"
     },
     {

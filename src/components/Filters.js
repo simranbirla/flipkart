@@ -2,11 +2,6 @@ import React from "react";
 import data from "../data.json";
 
 const Filters = (props) => {
-  const onClickGender = (gender) => {
-    const filtered = data.filter((item) => item.gender === gender);
-    props.setList(filtered);
-  };
-
   const onCLickSort = (order) => {
     let sorted;
     if (order === "A") {
@@ -15,11 +10,6 @@ const Filters = (props) => {
       sorted = data.sort((a, b) => b.price - a.price);
     }
     props.setList([...sorted]);
-  };
-
-  const onClickWear = (category) => {
-    const filtered = data.filter((item) => item.wear === category);
-    props.setList(filtered);
   };
 
   const onChangeSize = (e) => {
@@ -31,16 +21,21 @@ const Filters = (props) => {
     }
   };
 
+  const onClickFilter = (param, type) => {
+    const filtered = data.filter((item) => item[param] === type);
+    props.setList(filtered);
+  };
+
   return (
     <div>
-      <button onClick={() => onClickGender("M")}>Gender Men</button>
-      <button onClick={() => onClickGender("F")}>Gender Women</button>
-      <button onClick={() => onClickGender("U")}>Unisex</button>
+      <button onClick={() => onClickFilter("gender", "M")}>Gender Men</button>
+      <button onClick={() => onClickFilter("gender", "F")}>Gender Women</button>
+      <button onClick={() => onClickFilter("gender", "U")}>Unisex</button>
       <button onClick={() => props.setList(data)}>All</button>
       <button onClick={() => onCLickSort("A")}>Lowest to highset</button>
       <button onClick={() => onCLickSort("D")}>Highset</button>
-      <button onClick={() => onClickWear("Top")}>Top</button>
-      <button onClick={() => onClickWear("Pant")}>Bottoms</button>
+      <button onClick={() => onClickFilter("wear", "Top")}>Top</button>
+      <button onClick={() => onClickFilter("wear", "Pant")}>Bottoms</button>
 
       <select onChange={(e) => onChangeSize(e)}>
         <option value="All">Select</option>
@@ -49,6 +44,16 @@ const Filters = (props) => {
         <option value="L">Large</option>
         <option value="XL">Extra Large</option>
       </select>
+      <p>
+        <button onClick={() => onClickFilter("brand", "Roadster")}>
+          Roadster
+        </button>
+        <button onClick={() => onClickFilter("brand", "HRX")}>HRX</button>
+        <button onClick={() => onClickFilter("brand", "Woodland")}>
+          Woodland
+        </button>
+        <button onClick={() => onClickFilter("brand", "Cotton")}>Cotton</button>
+      </p>
     </div>
   );
 };
