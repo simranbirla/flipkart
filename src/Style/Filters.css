@@ -26,10 +26,15 @@
 }
 
 .filters_gender,
-.filters_gender-main {
+.filters_gender-main,
+.filters_sort,
+.filters_size,
+.filters_wear,
+.filters_brand {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  width: 100%;
 }
 
 .filters_gender-main button {
@@ -38,4 +43,30 @@
   font-weight: 500;
   padding: 10px 30px;
   cursor: pointer;
+}
+
+.filters_sort button,
+.filters_brand-main button,
+.filters_wear-main button {
+  background: none;
+  border: 2px solid black;
+  cursor: pointer;
+  padding: 10px 20px;
+}
+
+.filters_size select {
+  padding: 10px 30px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.filters_brand-main {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.filters_wear-main {
+  display: flex;
+  gap: 10px;
 }

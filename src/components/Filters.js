@@ -34,8 +34,15 @@ const Filters = (props) => {
         <button onClick={() => props.setList(data)}>Clear</button>
       </h3>
       <div className="filters_sort">
-        <button onClick={() => onCLickSort("A")}>Lowest to highset</button>
-        <button onClick={() => onCLickSort("D")}>Highset</button>
+        <button onClick={() => onCLickSort("A")}>
+          <i className="fas fa-sort-numeric-down"></i>
+          {"  "}Lowest to highest
+        </button>
+        <button onClick={() => onCLickSort("D")}>
+          {" "}
+          <i className="fas fa-sort-numeric-up-alt"></i>
+          {"  "}Highest to Lowest
+        </button>
       </div>
 
       <div className="filters_gender">
@@ -48,6 +55,7 @@ const Filters = (props) => {
       </div>
 
       <div className="filters_size">
+        <h4>Size:</h4>
         <select onChange={(e) => onChangeSize(e)}>
           <option value="All">Select</option>
           <option value="S">Small</option>
@@ -58,19 +66,27 @@ const Filters = (props) => {
       </div>
 
       <div className="filters_wear">
-        <button onClick={() => onClickFilter("wear", "Top")}>Top</button>
-        <button onClick={() => onClickFilter("wear", "Pant")}>Bottoms</button>
+        <h4>Category:</h4>
+        <div className="filters_wear-main">
+          <button onClick={() => onClickFilter("wear", "Top")}>Top</button>
+          <button onClick={() => onClickFilter("wear", "Pant")}>Bottoms</button>
+        </div>
       </div>
 
       <div className="filters_brand">
-        <button onClick={() => onClickFilter("brand", "Roadster")}>
-          Roadster
-        </button>
-        <button onClick={() => onClickFilter("brand", "HRX")}>HRX</button>
-        <button onClick={() => onClickFilter("brand", "Woodland")}>
-          Woodland
-        </button>
-        <button onClick={() => onClickFilter("brand", "Cotton")}>Cotton</button>
+        <h4>Brands:</h4>
+        <div className="filters_brand-main">
+          <button onClick={() => onClickFilter("brand", "Roadster")}>
+            Roadster
+          </button>
+          <button onClick={() => onClickFilter("brand", "HRX")}>HRX</button>
+          <button onClick={() => onClickFilter("brand", "Woodland")}>
+            Woodland
+          </button>
+          <button onClick={() => onClickFilter("brand", "Cotton")}>
+            Cotton
+          </button>
+        </div>
       </div>
     </div>
   );
