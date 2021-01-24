@@ -1,0 +1,38 @@
+.header {
+  background-color: #2874f0;
+  padding: 1em;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.header_left {
+  display: flex;
+  gap: 20px;
+  width: 50%;
+}
+
+.header_left img {
+  align-self: center;
+}
+
+.header_left input {
+  width: 80%;
+  padding: 10px;
+}
+
+.header_right {
+  display: flex;
+  gap: 20px;
+}
+
+.header_right p {
+  align-self: center;
+  color: white;
+}
+
+.header_right .header_right-login {
+  background-color: white;
+  color: #2874f0;
+  padding: 10px 30px;
+}

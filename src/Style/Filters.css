@@ -70,3 +70,11 @@
   display: flex;
   gap: 10px;
 }
+
+button:active {
+  outline: none;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.4);
+}
+button:focus {
+  outline: none;
+}
