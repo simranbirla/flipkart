@@ -6,9 +6,9 @@ const Filters = (props) => {
   const onCLickSort = (order) => {
     let sorted;
     if (order === "A") {
-      sorted = data.sort((a, b) => a.price - b.price);
+      sorted = props.list.sort((a, b) => a.price - b.price);
     } else {
-      sorted = data.sort((a, b) => b.price - a.price);
+      sorted = props.list.sort((a, b) => b.price - a.price);
     }
     props.setList([...sorted]);
   };
