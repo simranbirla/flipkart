@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import data from "../data.json";
 import "../Style/Filters.css";
 
 const Filters = (props) => {
+  const [filters, setFilters] = useState({});
+
   const onCLickSort = (order) => {
     let sorted;
     if (order === "A") {
@@ -17,21 +19,32 @@ const Filters = (props) => {
     if (e.target.value === "All") {
       props.setList(data);
     } else {
-      const filtered = data.filter((item) => item.size === e.target.value);
+      const filtered = props.list.filter(
+        (item) => item.size === e.target.value
+      );
       props.setList(filtered);
     }
   };
 
   const onClickFilter = (param, type) => {
+    setFilters({ ...filters, [param]: type });
     const filtered = data.filter((item) => item[param] === type);
     props.setList(filtered);
   };
 
+  const clearAll = () => {
+    setFilters({});
+    props.setList(data);
+  };
+
   return (
     <div className="filters">
+      <div className="applied-filters">
+        <p>{filters.gender}</p> <p>{filters.brand}</p> <p>{filters.wear}</p>
+      </div>
       <h3>
         Clear all filters
-        <button onClick={() => props.setList(data)}>Clear</button>
+        <button onClick={() => clearAll()}>Clear</button>
       </h3>
       <div className="filters_sort">
         <button onClick={() => onCLickSort("A")}>
