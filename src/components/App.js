@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import data from "../data.json";
 import Products from "./Products";
 import Filters from "./Filters";
-
+import "../Style/index.css";
 const App = () => {
   const [list, setList] = useState(data);
 

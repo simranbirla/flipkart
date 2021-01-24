@@ -3,7 +3,7 @@ import "../Style/Product.css";
 const Product = ({ item }) => {
   return (
     <div className="product">
-      <img src={item.img} alt="clothes" width="300px" />
+      <img src={item.img} alt="clothes" />
       <strong>{item.brand}</strong>
       <p>Size:{item.size}</p>
       <p>Gender:{item.gender}</p>
