@@ -17,3 +17,7 @@ export const decreaseItem = (item) => {
 export const saveLater = (item) => {
   return { type: "ADD_SAVE", payload: item };
 };
+
+export const deleteLater = (item) => {
+  return { type: "REMOVE_SAVE", payload: item };
+};

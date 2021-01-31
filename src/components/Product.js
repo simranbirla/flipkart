@@ -6,7 +6,6 @@ import { addCart } from "../redux/actions";
 const Product = (props) => {
   return (
     <div className="product">
-      {console.log(props)}
       <img src={props.item.img} alt="clothes" />
       <strong>{props.item.brand}</strong>
       <p>Size:{props.item.size}</p>
@@ -24,7 +23,6 @@ const Product = (props) => {
 };
 
 const mapStateToProps = (state) => {
-  console.log(state);
   return { cart: state };
 };
 
