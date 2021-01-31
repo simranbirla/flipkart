@@ -1,22 +1,31 @@
 import React from "react";
 import "../Style/Product.css";
-const Product = ({ item }) => {
+import { connect } from "react-redux";
+import { addCart } from "../redux/actions";
+
+const Product = (props) => {
   return (
     <div className="product">
-      <img src={item.img} alt="clothes" />
-      <strong>{item.brand}</strong>
-      <p>Size:{item.size}</p>
-      <p>Gender:{item.gender}</p>
+      {console.log(props)}
+      <img src={props.item.img} alt="clothes" />
+      <strong>{props.item.brand}</strong>
+      <p>Size:{props.item.size}</p>
+      <p>Gender:{props.item.gender}</p>
       <p>
-        Price : Rs {item.d_price}{" "}
+        Price : Rs {props.item.d_price}{" "}
         <span style={{ textDecoration: "line-through", color: "gray" }}>
           {" "}
-          {item.price}{" "}
+          {props.item.price}{" "}
         </span>
       </p>
-      <button>Add To cart</button>
+      <button onClick={() => props.addCart(props.item)}>Add To cart</button>
     </div>
   );
 };
 
-export default Product;
+const mapStateToProps = (state) => {
+  console.log(state);
+  return { cart: state };
+};
+
+export default connect(mapStateToProps, { addCart })(Product);

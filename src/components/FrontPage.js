@@ -1,7 +1,6 @@
 import React from "react";
 import Products from "./Products";
 import Filters from "./Filters";
-
 const FrontPage = ({ setList, list }) => {
   return (
     <>

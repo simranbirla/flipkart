@@ -1,4 +1,7 @@
 import React from "react";
+
+import { Link } from "react-router-dom";
+
 import "../Style/Header.css";
 const Header = () => {
   return (
@@ -14,7 +17,10 @@ const Header = () => {
       <div className="header_right">
         <p className="header_right-login">Login</p>
         <p>
-          <i className="fas fa-shopping-cart"></i> Cart
+          <Link to="/cart">
+            {" "}
+            <i className="fas fa-shopping-cart"></i> Cart
+          </Link>
         </p>
       </div>
     </div>
