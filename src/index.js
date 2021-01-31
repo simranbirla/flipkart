@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import App from "./components/App";
-import reducers from "./redux/reducers/Addcart";
+import reducers from "./redux/reducers";
 import "./Style/index.css";
 import { Provider } from "react-redux";
 import { compose, createStore, applyMiddleware } from "redux";
