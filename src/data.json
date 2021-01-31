@@ -5,6 +5,7 @@
         "gender":"M",
         "size":"S",
         "price":700,
+        "d_price":500,
         "brand":"HRX",
         "wear":"Top"
     },
@@ -15,7 +16,8 @@
         "size":"M",
         "price":1000,
         "brand":"Roadster",
-        "wear":"Top"
+        "wear":"Top",
+        "d_price":955
     },
     {
         "id":3,
@@ -24,7 +26,8 @@
         "size":"M",
         "price":1200,
         "brand":"Roadster",
-        "wear":"Top"
+        "wear":"Top",
+        "d_price":1009
     },
     {
         "id":4,
@@ -33,7 +36,8 @@
         "size":"L",
         "price":1200,
         "brand":"HRX",
-        "wear":"Top"
+        "wear":"Top",
+        "d_price":1100
     },
     {
         "id":5,
@@ -42,7 +46,8 @@
         "size":"L",
         "price":800,
         "brand":"Cotton",
-        "wear":"Top"
+        "wear":"Top",
+        "d_price":779
     },
     {
         "id":6,
@@ -51,7 +56,8 @@
         "size":"M",
         "price":1800,
         "brand":"Woodland",
-        "wear":"Top"
+        "wear":"Top",
+        "d_price":1230
     },
     {
         "id":7,
@@ -60,7 +66,8 @@
         "size":"XL",
         "price":2000,
         "brand":"Woodland",
-        "wear":"Top"
+        "wear":"Top",
+        "d_price":1300
     },
     {
         "id":8,
@@ -69,7 +76,8 @@
         "size":"XL",
         "price":1300,
         "brand":"HRX",
-        "wear":"Pant"
+        "wear":"Pant",
+        "d_price":1200
     },
     {
         "id":9,
@@ -78,7 +86,8 @@
         "size":"L",
         "price":1400,
         "brand":"Roadster",
-        "wear":"Pant"
+        "wear":"Pant",
+        "d_price":1350
     },
     {
         "id":10,
@@ -87,7 +96,8 @@
         "size":"XL",
         "price":1280,
         "brand":"Cotton",
-        "wear":"Pant"
+        "wear":"Pant",
+        "d_price":1180
     },
     {
         "id":11,
@@ -96,7 +106,8 @@
         "size":"L",
         "price":1305,
         "brand":"Cotton",
-        "wear":"Pant"
+        "wear":"Pant",
+        "d_price":1200
     },
     {
         "id":12,
@@ -105,7 +116,8 @@
         "size":"S",
         "price":800,
         "brand":"Woodland",
-        "wear":"Top"
+        "wear":"Top",
+        "d_price":699
     },
     {
         "id":13,
@@ -114,7 +126,8 @@
         "size":"L",
         "price":900,
         "brand":"Roadster",
-        "wear":"Pant"
+        "wear":"Pant",
+        "d_price":599
     },
     {
         "id":14,
@@ -123,7 +136,8 @@
         "size":"XL",
         "price":1222,
         "brand":"Woodland",
-        "wear":"Top"
+        "wear":"Top",
+        "d_price":900
     },
     {
         "id":15,
@@ -132,7 +146,8 @@
         "size":"S",
         "price":1105,
         "brand":"Roadster",
-        "wear":"Pant"
+        "wear":"Pant",
+        "d_price":1000
     }
 
 ]

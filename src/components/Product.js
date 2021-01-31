@@ -7,7 +7,14 @@ const Product = ({ item }) => {
       <strong>{item.brand}</strong>
       <p>Size:{item.size}</p>
       <p>Gender:{item.gender}</p>
-      <p>Price : Rs {item.price}</p>
+      <p>
+        Price : Rs {item.d_price}{" "}
+        <span style={{ textDecoration: "line-through", color: "gray" }}>
+          {" "}
+          {item.price}{" "}
+        </span>
+      </p>
+      <button>Add To cart</button>
     </div>
   );
 };

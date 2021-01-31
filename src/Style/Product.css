@@ -18,6 +18,12 @@
   height: 500px;
 }
 
+.product button {
+  padding: 10px 30px;
+  cursor: pointer;
+  background-color: #2874f0;
+}
+
 .product img {
   width: 250px;
   height: 300px;
